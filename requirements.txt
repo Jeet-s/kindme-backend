@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+requests
+transformers
+torch 
+pillow
+openai-whisper
+python-multipart
+protobuf
+sentencepiece
