@@ -14,6 +14,20 @@ from location import get_help
 
 app = FastAPI()
 
+# Configure CORS settings
+origins = [
+    "http://localhost:5173",  # your frontend domain (for development)
+    "https://your-frontend-domain.com",  # production frontend domain
+    "https://maintestkindme.netlify.app"
+]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 AUDIO_DIR = "uploads/audio"
 IMAGE_DIR = "uploads/images"
 
