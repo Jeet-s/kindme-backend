@@ -1,9 +1,10 @@
 import requests
 import json
 from prompt import issue_type_prompt
+import os
 
-LLAMA_URL = "https://Meta-Llama-3-70B-Instruct-jpuky-serverless.eastus2.inference.ai.azure.com/v1/chat/completions"
-LLAMA_API_KEY = "RTnzabZ71DBrS2vbT26fvVdUzX1a9MDn"
+LLAMA_URL = os.environ.get("LLAMA_URL")
+LLAMA_API_KEY = os.environ.get("LLAMA_API_KEY")
 
 def call_llama(prompt):
     
