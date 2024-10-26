@@ -81,6 +81,7 @@ async def upload(file: UploadFile = File(None), help_text: str = Form(None),lati
     print(help_type)
 
     response = {
+        "category": place_type,
         "first aid": first_aid,
         "locations": help_type
     }
